@@ -32,7 +32,7 @@ automations:
             {{ repo | explainRankByGitBlame(gt=25) }}
       # - action: add-reviewers@v1
       #   args:
-      #     reviewers: {{ repo | rankByGitBlame(gt=26) }}
+      #     reviewers: {{ repo | rankByGitBlame(gt=25) }}
 
 calc:
   etr: {{ branch | estimatedReviewTime }}
