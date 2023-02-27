@@ -33,12 +33,12 @@ struct ContentView: View {
                 .padding(.leading, 25)
             LabelValue(imageName: "playbackSpeedIcon",
                        labelTitle: "PlaybackSpeed",
-                       labelValue: "1x")
+                       labelValue: "2x")
             Divider()
                 .padding(.leading, 25)
             LabelValue(imageName: "videoQualityIcon",
                        labelTitle: "Quality",
-                       labelValue: "480p")
+                       labelValue: "720p")
             Divider()
                 .padding(.leading, 25)
             Spacer()
