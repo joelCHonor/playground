@@ -34,20 +34,9 @@ automations:
         args:
         reviewers: {{ repo | rankByGitBlame(gt=25) }}
 
-  deleted:
-    if:
-      - {{ has.deleted_files }}
-    run: 
-      - action: add-label@v1
-        args:
-          label: 'deleted-files'
-          color: '#DF9C04'
-
 calc:
   etr: {{ branch | estimatedReviewTime }}
 is:
   formatting: {{ source.diff.files | isFormattingChange }}
   docs: {{ files | allDocs }}
   tests: {{ files | allTests }}
-has:
-  deleted_files: {{ source.diff.files | map(attr='new_file') | match(term='/dev/null') | some }}
